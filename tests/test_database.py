@@ -15,7 +15,7 @@ def db_connection():
 
 def test_alumnos_insertados(db_connection):
     with db_connection.cursor() as cur:
-        cur.execute("SELECT COUNT(*) FROM alumno;")
+        cur.execute("SELECT COUNT(*) FROM alumnos;")
         count = cur.fetchone()[0]
         assert count == 10
 
